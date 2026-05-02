@@ -1,0 +1,14 @@
+{
+  "name": "web-components-blog",
+  "version": "1.0.0",
+  "description": "An exploration in SPA development with web components and a vanilla JS focus.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
