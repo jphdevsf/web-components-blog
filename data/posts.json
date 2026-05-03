@@ -1,0 +1,97 @@
+{
+  "posts": [
+    {
+      "slug": "avenue-of-the-giants",
+      "title": "Avenue of the Giants — Northern California Redwoods",
+      "date": "2025-06-10",
+      "tags": ["hiking", "redwoods", "california", "road-trip"],
+      "excerpt": "Driving through towering redwoods along the Avenue of the Giants felt like entering another world.",
+      "primaryImage": "v1777680891/B21F4506-C5C6-460E-8409-B9143052EB55_1_105_c_ehd4ox",
+      "stats": {
+        "distance": "3.5 mi",
+        "elevation": "200 ft",
+        "difficulty": "easy"
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "We pulled off Highway 101 onto the Avenue of the Giants and immediately the world changed. Towering redwoods lined both sides of the road, their canopies filtering the sunlight into soft green beams."
+        },
+        {
+          "type": "image",
+          "src": "v1777680891/B21F4506-C5C6-460E-8409-B9143052EB55_1_105_c_ehd4ox",
+          "alt": "Towering redwoods along Avenue of the Giants"
+        },
+        {
+          "type": "paragraph",
+          "content": "We stopped at the Founder's Grove trailhead and took the loop trail through some of the oldest and tallest trees in the park."
+        },
+        {
+          "type": "image",
+          "src": "v1777680140/A4A305CD-68AD-45F1-9E5D-E0B9F9A0A173_1_105_c_owhnao",
+          "alt": "Family walking among the redwoods"
+        },
+        {
+          "type": "paragraph",
+          "content": "The kids were in awe — you really can't understand the scale of these trees until you're standing at the base of one looking straight up."
+        },
+        {
+          "type": "image",
+          "src": "v1777680120/09631D9D-B4DC-4DF3-A07C-C2488D09B7C8_1_105_c_ifqtpe",
+          "alt": "Looking up at the redwood canopy"
+        }
+      ]
+    },
+    {
+      "slug": "inner-space-cave-austin",
+      "title": "Inner Space Cave Tour — Austin, Texas",
+      "date": "2025-03-22",
+      "tags": ["cave", "texas", "family-trip", "geology"],
+      "excerpt": "A underground adventure through limestone formations right in the Texas Hill Country.",
+      "primaryImage": "v1777680831/F20AB199-8935-4DE4-9F18-76BEBF78A9D1_1_105_c_d7xz7x",
+      "stats": {
+        "distance": "1.2 mi",
+        "elevation": "n/a",
+        "difficulty": "easy"
+      },
+      "body": [
+        {
+          "type": "paragraph",
+          "content": "Inner Space Cavern is a karst cave discovered in 1963 during construction of Interstate 35. We took the Adventure Tour which goes through some of the most spectacular formations."
+        },
+        {
+          "type": "image",
+          "src": "v1777680831/F20AB199-8935-4DE4-9F18-76BEBF78A9D1_1_105_c_d7xz7x",
+          "alt": "Entrance to Inner Space Cavern"
+        },
+        {
+          "type": "paragraph",
+          "content": "The stalactites and stalagmites were incredible. Our guide explained that some of these formations are over 100,000 years old."
+        },
+        {
+          "type": "image",
+          "src": "v1777680826/79966570-29B6-4473-BCDE-740EBB8C2867_1_105_c_v9zvae",
+          "alt": "Stalactite formations inside the cave"
+        },
+        {
+          "type": "paragraph",
+          "content": "The temperature stays around 72 degrees year-round, which was a welcome break from the Texas heat above ground."
+        },
+        {
+          "type": "image",
+          "src": "v1777680819/F89D30AA-BDDB-4E71-A098-29436AE8278A_1_105_c_f3vuwq",
+          "alt": "Flowstone formations in the cave"
+        },
+        {
+          "type": "paragraph",
+          "content": "The kids loved the section where the guide turned off all the lights to show true cave darkness — you literally couldn't see your hand an inch from your face."
+        },
+        {
+          "type": "image",
+          "src": "v1777680813/33B94973-C3BF-4023-8DD2-DE9060E2B0D1_1_105_c_d9oin2",
+          "alt": "Family photo inside Inner Space Cavern"
+        }
+      ]
+    }
+  ]
+}

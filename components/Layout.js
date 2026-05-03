@@ -17,28 +17,30 @@
  *  }
  */
 class LayoutComponent extends HTMLElement {
-    connectedCallback() {
-        const config = this.getConfig();
-        const { tag, classList, componentName } = config;
+  connectedCallback() {
+    const config = this.getConfig()
+    const { tag, classList, componentName } = config
 
-        // save the children!
-        const children = Array.from(this.childNodes);
-        
-        // create semantic parent
-        const el = document.createElement(tag);
-        el.classList = classList;
-        el.setAttribute('data-component-name', componentName);
-        
-        // semantic parent adopts the children
-        children.forEach(c => el.append(c));
+    // save the children!
+    const children = Array.from(this.childNodes)
 
-        // bye bye custom non-semantic element
-        this.replaceWith(el);
-    }
+    // create semantic parent
+    const el = document.createElement(tag)
+    el.classList = classList
+    el.setAttribute("data-component-name", componentName)
 
-    getConfig() {
-        throw new Error('getConfig() must be implemented');
-    }
+    // semantic parent adopts the children
+    children.forEach(c => {
+      el.append(c)
+    })
+
+    // bye bye custom non-semantic element
+    this.replaceWith(el)
+  }
+
+  getConfig() {
+    throw new Error("getConfig() must be implemented")
+  }
 }
 
 /**
@@ -48,52 +50,51 @@ class LayoutComponent extends HTMLElement {
  */
 
 export class Header extends LayoutComponent {
-    getConfig() {
-        return {
-            tag: 'header',
-            classList: 'header',
-            componentName: 'x-header'
-        };
+  getConfig() {
+    return {
+      tag: "header",
+      classList: "header",
+      componentName: "x-header"
     }
+  }
 }
 
 export class Footer extends LayoutComponent {
-    getConfig() {
-        return {
-            tag: 'footer',
-            classList: 'footer',
-            componentName: 'x-footer'
-        };
+  getConfig() {
+    return {
+      tag: "footer",
+      classList: "footer",
+      componentName: "x-footer"
     }
+  }
 }
 
 export class Main extends LayoutComponent {
-    getConfig() {
-        return {
-            tag: 'main',
-            classList: 'main',
-            componentName: 'x-main'
-        };
+  getConfig() {
+    return {
+      tag: "main",
+      classList: "main",
+      componentName: "x-main"
     }
+  }
 }
 
 export class Column extends LayoutComponent {
-    getConfig() {
-        return {
-            tag: 'span',
-            classList: 'column',
-            componentName: 'x-column'
-        };
+  getConfig() {
+    return {
+      tag: "span",
+      classList: "column",
+      componentName: "x-column"
     }
+  }
 }
 
 export class Row extends LayoutComponent {
-    getConfig() {
-        return {
-            tag: 'section',
-            classList: 'row',
-            componentName: 'x-row'
-        };
+  getConfig() {
+    return {
+      tag: "section",
+      classList: "row",
+      componentName: "x-row"
     }
+  }
 }
-

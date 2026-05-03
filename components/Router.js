@@ -1,22 +1,86 @@
-import { toKebabCase } from './../lib/utils.js';
+import { toKebabCase } from "./../lib/utils.js"
 
 export class Router {
-    constructor(routes, targetEl) {
-        this.routes = routes;
-        this.targetEl = targetEl;
-        window.addEventListener('popstate', () => this.resolve())
+  constructor(target) {
+    this.staticRoutes = [
+      { path: "/", component: "Home" },
+      { path: "/home", component: "Home" },
+      { path: "/about", component: "About" },
+      { path: "/archive", component: "Archive" },
+    ]
+    this.dynamicRoutes = [
+      { path: "/post/:slug", component: "PostPage" },
+    ]
+    this.fallback = { component: "Home" }
+    this.targetEl = document.querySelector(target)
+    this.params = {}
+
+    window.addEventListener("popstate", () => this.resolve())
+    document.addEventListener("click", e => {
+      const btn = e.target.closest(".button.navigation")
+      if (btn) {
+        e.preventDefault()
+        this.navigate(btn.pathname)
+      }
+    })
+  }
+
+  init() {
+    this.resolve()
+  }
+
+  navigate(path) {
+    history.pushState({}, "", path)
+    this.resolve()
+  }
+
+  resolve() {
+    const path = location.pathname
+    this.params = {}
+
+    const staticRoute = this.staticRoutes.find(r => r.path === path)
+    if (staticRoute) {
+      this.render(staticRoute.component)
+      return
     }
 
-    navigate(path) {
-        history.pushState({}, '', path);
-        this.resolve()
+    const { route, params } = this.matchDynamic(path)
+    if (route) {
+      this.params = params
+      this.render(route.component, params)
+      return
     }
 
-    resolve() {
-        const path = location.pathname;
-        const route = this.routes.find(r => r.path === path);
-        console.log(route.component);
-        const componentName = `x-${toKebabCase(route.component)}`
-        if (route) this.targetEl.innerHTML = `<${componentName} class="jacob yup"></${componentName}>`
+    this.render(this.fallback.component)
+  }
+
+  matchDynamic(path) {
+    const pathParts = path.split("/")
+
+    for (const route of this.dynamicRoutes) {
+      const routeParts = route.path.split("/")
+      if (routeParts.length !== pathParts.length) continue
+
+      const params = {}
+      const match = routeParts.every((part, i) => {
+        if (part.startsWith(":")) {
+          params[part.slice(1)] = pathParts[i]
+          return true
+        }
+        return part === pathParts[i]
+      })
+
+      if (match) return { route, params }
     }
+
+    return { route: null, params: {} }
+  }
+
+  render(component, params = {}) {
+    const componentName = `x-${toKebabCase(component)}`
+    const attrs = Object.entries(params)
+      .map(([key, val]) => `${key}="${val}"`)
+      .join(" ")
+    this.targetEl.innerHTML = `<${componentName} ${attrs}></${componentName}>`
+  }
 }
