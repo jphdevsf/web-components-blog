@@ -18,6 +18,7 @@
  */
 class LayoutComponent extends HTMLElement {
   connectedCallback() {
+    const id = this.getAttribute("id")
     const config = this.getConfig()
     const { tag, classList, componentName } = config
 
@@ -28,6 +29,7 @@ class LayoutComponent extends HTMLElement {
     const el = document.createElement(tag)
     el.classList = classList
     el.setAttribute("data-component-name", componentName)
+    if (id) el.id = id
 
     // semantic parent adopts the children
     children.forEach(c => {

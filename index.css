@@ -22,7 +22,7 @@ html,
 body {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 body {
@@ -51,6 +51,7 @@ body {
 
 .main {
   display: block;
+  min-height: 100vh;
   padding: var(--space-1);
   background-color: var(--color-4);
 }
@@ -66,8 +67,8 @@ body {
 
 .column {
   display: block;
-  width: 100%;
-  margin: 1em;
+  width: calc(100% - var(--space-3) * 2);
+  margin: var(--space-3);
 }
 
 .footer {
@@ -127,4 +128,65 @@ h2 {
   font-size: 1.75em;
   color: var(--color-6);
   background-color: var(--color-2);
+}
+
+.loading {
+  display: block;
+  font-size: 2em;
+  text-align: center;
+}
+
+x-post {
+  display: block;
+  margin-top: var(--space-4);
+}
+
+x-post .row {
+  flex-direction: column;
+}
+
+x-post p {
+  display: block;
+  margin: var(--space-3);
+  font-weight: 400;
+  line-height: 1.65em;
+}
+
+x-post img {
+  float: left;
+  display: block;
+  max-width: 300px;
+  margin: var(--space-3);
+}
+
+x-post img:nth-child(odd) {
+  float: right;
+}
+
+x-archive .row {
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  color: var(--color-2);
+  text-decoration: none;
+  background-color: var(--color-6);
+}
+.card img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+}
+
+.card h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.card p {
+  display: block;
+  padding: var(--space-3);
+  margin: 0;
+  font-weight: 300;
 }
