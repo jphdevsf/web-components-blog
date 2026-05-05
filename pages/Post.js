@@ -46,17 +46,24 @@ export class Post extends HTMLElement {
     this.postHtml = `
     <x-row>
         <x-column>
-            <a href="/">Back</a>
+            <span class="back-button">
+              <a href="/">BACK ></a>
+            </span>
         </x-column>
         <x-column>
+        <article>
             <h1>${p.title}</h1>
             <p>${p.date}</p>
-        </x-column>
-      <x-column>
         <span class="post-body">
             ${bodyHtml}
         </span>
+        </article>
       </x-column>
+      <x-column>
+            <span class="back-button">
+              <a href="/">BACK ></a>
+            </span>
+        </x-column>
     </x-row>
     `
 

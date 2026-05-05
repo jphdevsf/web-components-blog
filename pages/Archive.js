@@ -37,13 +37,15 @@ export class Archive extends HTMLElement {
       .map(
         p => `
           <x-column>
-            <a class="card" href="/post/${p.slug}">
+            <article>
+            <a class="card skinny" href="/post/${p.slug}">
               <img src="${thumbnail(p.primaryImage)}" />
               <span>
                 <h2>${p.title}</h2>
                 <p>${p.excerpt}</p>
               </span>
             </a>
+            </article>
           </x-column>
         `
       )
