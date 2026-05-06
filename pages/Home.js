@@ -1,5 +1,4 @@
 import { getPostData } from "../lib/getPostData.js"
-// import { hero } from "../lib/images.js"
 
 export class Home extends HTMLElement {
   constructor() {

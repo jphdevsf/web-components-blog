@@ -192,15 +192,3 @@ x-archive .row {
   font-size: 2em;
   text-align: center;
 }
-
-.card.skinny {
-  display: flex;
-  flex-direction: row;
-  color: var(--color-2);
-  text-decoration: none;
-  background-color: var(--color-6);
-}
-
-.card.skinny img {
-  max-width: 200px;
-}
