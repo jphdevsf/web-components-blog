@@ -1,4 +1,5 @@
-import { hero } from "../lib/images.js"
+import { hero } from "../../lib/images.js"
+import { loadCSS } from "../../lib/loadCSS.js"
 
 export class ThreeRecentPosts extends HTMLElement {
   constructor() {
@@ -9,6 +10,10 @@ export class ThreeRecentPosts extends HTMLElement {
   set data(value) {
     this.dataVal = value
     this.render()
+  }
+
+  connectedCallback() {
+    loadCSS(this)
   }
 
   render() {

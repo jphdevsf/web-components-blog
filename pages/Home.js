@@ -28,7 +28,6 @@ export class Home extends HTMLElement {
     try {
       this.postData = await getPostData()
       this.postDataSorted = [...this.postData].sort((a, b) => new Date(b.date) - new Date(a.date))
-      console.log(this.postData, this.postDataSorted)
     } catch (err) {
       this.innerHTML = `<x-row><x-column><p class="loading">Failed to load posts.</p></x-column></x-row>`
       console.error("Failed to load data: ", err)

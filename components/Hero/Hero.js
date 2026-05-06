@@ -1,4 +1,5 @@
-import { hero } from "../lib/images.js"
+import { hero } from "../../lib/images.js"
+import { loadCSS } from "../../lib/loadCSS.js"
 
 export class Hero extends HTMLElement {
   constructor() {
@@ -6,6 +7,11 @@ export class Hero extends HTMLElement {
     this.dataVal = {}
     this.loading = true
   }
+
+  connectedCallback() {
+    loadCSS(this)
+  }
+
   set data(value) {
     this.dataVal = value
     this.render()
