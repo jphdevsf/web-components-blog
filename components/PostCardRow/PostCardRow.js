@@ -1,11 +1,10 @@
-import { hero } from "../../lib/images.js"
+import { card } from "../../lib/images.js"
 import { loadCSS } from "../../lib/loadCSS.js"
 
-export class ThreeRecentPosts extends HTMLElement {
+export class PostCardRow extends HTMLElement {
   constructor() {
     super()
-    this.dataVal = {}
-    this.loading = true
+    this.dataVal = []
   }
   set data(value) {
     this.dataVal = value
@@ -25,7 +24,7 @@ export class ThreeRecentPosts extends HTMLElement {
             return `
                     <x-column>
                         <a class="card" href="/post/${p.slug}">
-                        <img src="${hero(p.primaryImage)}" />
+                        <img src="${card(p.primaryImage)}" />
                         <span>
                             <h2>${p.title}</h2>
                             <p>${p.excerpt}</p>

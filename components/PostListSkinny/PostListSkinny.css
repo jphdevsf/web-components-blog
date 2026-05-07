@@ -1,4 +1,4 @@
-@scope (x-skinny-card) {
+@scope (x-post-list-skinny) {
   .card {
     display: flex;
     flex-direction: row;

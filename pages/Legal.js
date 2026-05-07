@@ -1,7 +1,7 @@
 import { getPostData } from "../lib/getPostData.js"
 import { post } from "../lib/images.js"
 
-export class Post extends HTMLElement {
+export class Legal extends HTMLElement {
   constructor() {
     super()
     this.postHtml = ""
@@ -35,10 +35,6 @@ export class Post extends HTMLElement {
 
   renderPost() {
     const p = this.postData.find(p => p.slug === this.slug)
-    if (!p) {
-      this.dispatchEvent(new CustomEvent("route-not-found", { bubbles: true }))
-      return
-    }
     const bodyHtml = p.body
       .map(item => {
         if (item.type === "paragraph") return `<p>${item.content}</p>`

@@ -1,11 +1,10 @@
 import { thumbnail } from "../../lib/images.js"
 import { loadCSS } from "../../lib/loadCSS.js"
 
-export class SkinnyCard extends HTMLElement {
+export class PostListSkinny extends HTMLElement {
   constructor() {
     super()
-    this.dataVal = {}
-    this.loading = true
+    this.dataVal = []
   }
   set data(value) {
     this.dataVal = value

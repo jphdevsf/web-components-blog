@@ -14,11 +14,10 @@ export class Archive extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = ""
     this.innerHTML = `
-    <x-skinny-card>test</x-skinny-card>
+    <x-post-list-skinny></x-post-list-skinny>
     `
-    this.querySelector("x-skinny-card").data = this.postDataSorted
+    this.querySelector("x-post-list-skinny").data = this.postDataSorted
   }
 
   async loadData() {
@@ -26,8 +25,7 @@ export class Archive extends HTMLElement {
       this.postData = await getPostData()
       this.postDataSorted = [...this.postData].sort((a, b) => new Date(b.date) - new Date(a.date))
     } catch (err) {
-      this.innerHTML = `<x-row><x-column><p class="loading">Failed to load posts.</p></x-column></x-row>`
-      console.error("Failed to load data: ", err)
+      console.error(`Failed to load data for ${this.constructor.name}: `, err)
     }
   }
 }

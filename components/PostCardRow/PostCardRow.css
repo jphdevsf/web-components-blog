@@ -1,4 +1,4 @@
-@scope (x-three-recent-posts) {
+@scope (x-post-card-row) {
   .card {
     display: flex;
     flex-direction: column;

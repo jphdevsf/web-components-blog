@@ -1,5 +1,7 @@
+import { Hero } from "../components/Hero/Hero.js"
+import { PostCardRow } from "../components/PostCardRow/PostCardRow.js"
 import { getPostData } from "../lib/getPostData.js"
-
+import { tagName } from "../lib/utils.js"
 export class Home extends HTMLElement {
   constructor() {
     super()
@@ -14,13 +16,12 @@ export class Home extends HTMLElement {
   }
 
   render() {
-    this.innerHTML = ""
     this.innerHTML = `
-    <x-hero>test</x-hero>
-    <x-three-recent-posts>test</x-three-recent-posts>
+    <${tagName(Hero)}></${tagName(Hero)}>
+    <${tagName(PostCardRow)}></${tagName(PostCardRow)}>
     `
-    this.querySelector("x-hero").data = this.postDataSorted[0]
-    this.querySelector("x-three-recent-posts").data = this.postDataSorted.filter((_p, i) => i > 0 && i < 4)
+    this.querySelector(tagName(Hero)).data = this.postDataSorted[0]
+    this.querySelector(tagName(PostCardRow)).data = this.postDataSorted.filter((_p, i) => i > 0 && i < 4)
   }
 
   async loadData() {
@@ -28,8 +29,7 @@ export class Home extends HTMLElement {
       this.postData = await getPostData()
       this.postDataSorted = [...this.postData].sort((a, b) => new Date(b.date) - new Date(a.date))
     } catch (err) {
-      this.innerHTML = `<x-row><x-column><p class="loading">Failed to load posts.</p></x-column></x-row>`
-      console.error("Failed to load data: ", err)
+      console.error(`Failed to load data for ${this.constructor.name}: `, err)
     }
   }
 }
