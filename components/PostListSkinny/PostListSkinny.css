@@ -16,17 +16,20 @@
   .card > img {
     display: block;
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
+    max-height: 100px;
   }
 
   h2 {
+    padding: var(--space-3);
     margin: 0;
-    font-weight: 600;
+    font-size: 1.5em;
+    font-weight: var(--font-weight-2);
   }
 
   p {
     display: block;
-    padding: var(--space-3);
+    padding: 0 var(--space-3);
     margin: 0;
     font-weight: 300;
   }

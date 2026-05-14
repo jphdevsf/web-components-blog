@@ -2,14 +2,19 @@
   .card {
     display: flex;
     flex-direction: column;
+    height: 100%;
     color: var(--color-2);
     text-decoration: none;
     background-color: var(--color-6);
   }
 
   .card > span {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
+    height: 100%;
+    background-color: var(--color-6);
   }
 
   .card > img {
@@ -19,14 +24,19 @@
   }
 
   h2 {
+    padding: var(--space-1) var(--space-3);
     margin: 0;
-    font-weight: 600;
+    font-size: 2em;
+    font-weight: var(--font-weight-1);
+    color: var(--color-2);
   }
 
   p {
     display: block;
-    padding: var(--space-3);
+    padding: var(--space-2) var(--space-3);
     margin: 0;
     font-weight: 300;
+    color: var(--color-1);
+    background-color: var(--color-3);
   }
 }
