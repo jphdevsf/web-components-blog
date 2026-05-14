@@ -97,7 +97,7 @@ button:hover {
 .row {
   display: flex;
   width: 100%;
-  max-width: 1020px;
+  max-width: 800px;
   margin: var(--space-4) auto;
   background-color: var(--color-1);
   border: solid var(--space-1) var(--color-3);
@@ -123,8 +123,13 @@ button:hover {
   justify-content: end;
 }
 .back-button a {
-  color: var(--color-5);
+  /* color: var(--color-5); */
+  padding: var(--space-3);
+  font-weight: var(--font-weight-3);
+  /* color: var(--color-5); */
+  color: var(--color-2);
   text-decoration: none;
+  background-color: var(--color-6);
 }
 
 header .button {
@@ -152,33 +157,6 @@ footer .button {
   color: var(--color-1);
   background-color: var(--color-2);
   border: none;
-}
-
-x-post {
-  display: block;
-  margin-top: var(--space-4);
-}
-
-x-post .row {
-  flex-direction: column;
-}
-
-x-post p {
-  display: block;
-  margin: var(--space-3);
-  font-weight: 400;
-  line-height: 1.65em;
-}
-
-x-post img {
-  float: left;
-  display: block;
-  max-width: 300px;
-  margin: var(--space-3);
-}
-
-x-post img:nth-child(odd) {
-  float: right;
 }
 
 x-archive .row {

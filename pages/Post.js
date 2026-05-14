@@ -1,5 +1,6 @@
 import { getPostData } from "../lib/getPostData.js"
 import { post } from "../lib/images.js"
+import { loadPageCSS } from "../lib/loadCSS.js"
 
 export class Post extends HTMLElement {
   constructor() {
@@ -12,6 +13,7 @@ export class Post extends HTMLElement {
   async connectedCallback() {
     this.slug = this.getAttribute("slug")
     this.render()
+    loadPageCSS(this)
     await this.loadData()
     this.renderPost()
   }
@@ -56,9 +58,9 @@ export class Post extends HTMLElement {
         </x-column>
         <x-column>
         <article>
-            <h1>${p.title}</h1>
-            <p>${p.date}</p>
         <span class="post-body">
+        <h1>${p.title}</h1>
+        <p class="post-date">${p.date}</p>
             ${bodyHtml}
         </span>
         </article>
