@@ -1,4 +1,3 @@
-import { hero } from "../../lib/images.js"
 import { loadCSS } from "../../lib/loadCSS.js"
 
 export class Hero extends HTMLElement {
@@ -23,11 +22,11 @@ export class Hero extends HTMLElement {
     <x-row>
         <x-column>
             <a class="hero" href="/post/${dataVal.slug}">
-            <img src="${hero(dataVal.primaryImage)}" />
-            <span>
-                <h2>${dataVal.title}</h2>
-                <p>${dataVal.excerpt}</p>
-            </span>
+              <x-image alt="${dataVal.primaryImageAlt}" src="${dataVal.primaryImage}" size="hero"></x-image>
+              <span class="text-box">
+                  <h2>${dataVal.title}</h2>
+                  <p>${dataVal.excerpt}</p>
+              </span>
             </a>
         </x-column>
     </x-row>

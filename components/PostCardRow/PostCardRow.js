@@ -1,4 +1,4 @@
-import { card } from "../../lib/images.js"
+import { card } from "../../lib/imageUrl.js"
 import { loadCSS } from "../../lib/loadCSS.js"
 
 export class PostCardRow extends HTMLElement {
@@ -24,7 +24,7 @@ export class PostCardRow extends HTMLElement {
             return `
                     <x-column>
                         <a class="card" href="/post/${p.slug}">
-                        <img src="${card(p.primaryImage)}" />
+                        <x-image alt="${p.primaryImageAlt}" src="${p.primaryImage}" size="card"></x-image>
                         <span>
                             <h2>${p.title}</h2>
                             <p>${p.excerpt}</p>

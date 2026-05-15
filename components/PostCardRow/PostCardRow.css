@@ -1,12 +1,14 @@
 @scope (x-post-card-row) {
+  :scope {
+    grid-column: 1 / -1;
+    font-size: 0.65em;
+  }
   .row {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
-    justify-content: space-between;
+    display: block;
   }
 
   .column {
-    width: 32%;
+    width: 100%;
     margin: 0;
   }
 
@@ -38,7 +40,7 @@
     padding: var(--space-1) var(--space-3);
     margin: 0;
     font-size: 2em;
-    font-weight: var(--font-weight-1);
+    font-weight: var(--font-weight-2);
     color: var(--color-2);
   }
 
@@ -49,5 +51,21 @@
     font-weight: 300;
     color: var(--color-1);
     background-color: var(--color-3);
+  }
+
+  @media screen and (min-width: 640px) {
+    :scope {
+      grid-column: 2 / 3;
+      font-size: 1em;
+    }
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .column {
+      width: 32%;
+      margin: 0;
+    }
   }
 }

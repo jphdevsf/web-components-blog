@@ -7,6 +7,7 @@
       "tags": ["hiking", "redwoods", "california", "road-trip"],
       "excerpt": "Driving through towering redwoods along the Avenue of the Giants felt like entering another world.",
       "primaryImage": "v1777680891/B21F4506-C5C6-460E-8409-B9143052EB55_1_105_c_ehd4ox",
+      "primaryImageAlt": "Towering redwoods along Avenue of the Giants",
       "stats": {
         "distance": "3.5 mi",
         "elevation": "200 ft",
@@ -53,6 +54,7 @@
       "tags": ["cave", "texas", "family-trip", "geology"],
       "excerpt": "A underground adventure through limestone formations right in the Texas Hill Country.",
       "primaryImage": "v1777680831/F20AB199-8935-4DE4-9F18-76BEBF78A9D1_1_105_c_d7xz7x",
+      "primaryImageAlt": "Entrance to Inner Space Cavern",
       "stats": {
         "distance": "1.2 mi",
         "elevation": "n/a",
@@ -104,6 +106,7 @@
       "tags": ["hiking", "forest", "california", "state-park"],
       "excerpt": "A lush hike through Nisene Marks State Park in Aptos, California.",
       "primaryImage": "v1777681455/FEC9D0BB-0529-4D7B-9AA2-C13F8D8EEFDC_1_105_c_zumfag",
+      "primaryImageAlt": "Lush redwood forest at Nisene Marks State Park",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",
@@ -164,6 +167,7 @@
       "tags": ["hiking", "redwoods", "california", "state-park"],
       "excerpt": "Exploring the giant sequoias at Calaveras Big Trees State Park.",
       "primaryImage": "v1777680309/7C5D6436-C757-4A64-869E-EFAC73581D97_1_105_c_yzilpl",
+      "primaryImageAlt": "Giant sequoias at Calaveras Big Trees State Park",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",
@@ -206,6 +210,7 @@
       "tags": ["hiking", "volcano", "hawaii", "maui"],
       "excerpt": "Watching the sunrise above the clouds at Haleakala on Maui.",
       "primaryImage": "v1777681244/9C5BB02D-A6B0-4101-88BB-0EB33AEFA2C6_1_105_c_ia5lwf",
+      "primaryImageAlt": "Haleakala summit above the clouds at sunrise",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",
@@ -280,6 +285,7 @@
       "tags": ["hiking", "redwoods", "california", "state-park"],
       "excerpt": "Wandering among ancient redwoods at Jedediah Smith Redwoods State Park near Crescent City.",
       "primaryImage": "v1777680973/C5A82955-84A7-46DB-B1D6-10F5FFC3ED2E_1_105_c_rulrr8",
+      "primaryImageAlt": "Ancient redwoods at Jedediah Smith Redwoods State Park",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",
@@ -322,6 +328,7 @@
       "tags": ["hiking", "regional-park", "california"],
       "excerpt": "A scenic hike along the ridge at Pleasanton Ridge Regional Park.",
       "primaryImage": "v1777681396/4E3463CC-9281-471A-A342-F9E2AEC5C600_1_105_c_noimgf",
+      "primaryImageAlt": "Golden hills and oak woodland at Pleasanton Ridge Regional Park",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",
@@ -382,6 +389,7 @@
       "tags": ["hiking", "coastal", "california", "state-park"],
       "excerpt": "Coastal views and history at Point Loma in Cabrillo State Park near San Diego.",
       "primaryImage": "v1777681083/B6679A40-B547-46B4-929B-D1887B726390_1_105_c_coxckw",
+      "primaryImageAlt": "Coastal cliffs and Pacific views at Point Loma Cabrillo State Park",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",
@@ -442,6 +450,7 @@
       "tags": ["beach", "coastal", "california"],
       "excerpt": "A beautiful day at Trinidad Beach along the Northern California coast.",
       "primaryImage": "v1777680370/F6889A77-DCFC-4886-8226-3CE03E7FE14C_1_105_c_mzpe91",
+      "primaryImageAlt": "Sea stacks and driftwood at Trinidad Beach",
       "stats": {
         "distance": "TBD",
         "elevation": "TBD",

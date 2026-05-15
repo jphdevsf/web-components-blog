@@ -1,4 +1,4 @@
-import { thumbnail } from "../../lib/images.js"
+import { thumbnail } from "../../lib/imageUrl.js"
 import { loadCSS } from "../../lib/loadCSS.js"
 
 export class PostListSkinny extends HTMLElement {

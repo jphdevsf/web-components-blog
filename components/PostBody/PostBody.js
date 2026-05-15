@@ -1,7 +1,7 @@
-import { getPostData } from "../lib/getPostData.js"
-import { post } from "../lib/imageUrl.js"
+import { getPostData } from "../../lib/getPostData.js"
+import { loadCSS } from "../../lib/loadCSS.js"
 
-export class Legal extends HTMLElement {
+export class PostBody extends HTMLElement {
   constructor() {
     super()
     this.postHtml = ""
@@ -12,6 +12,7 @@ export class Legal extends HTMLElement {
   async connectedCallback() {
     this.slug = this.getAttribute("slug")
     this.render()
+    loadCSS(this)
     await this.loadData()
     this.renderPost()
   }
@@ -35,37 +36,41 @@ export class Legal extends HTMLElement {
 
   renderPost() {
     const p = this.postData.find(p => p.slug === this.slug)
+    if (!p) {
+      this.dispatchEvent(new CustomEvent("route-not-found", { bubbles: true }))
+      return
+    }
     const bodyHtml = p.body
       .map(item => {
         if (item.type === "paragraph") return `<p>${item.content}</p>`
-        if (item.type === "image") return `<img src="${post(item.src)}" alt="${item.alt}" />`
+        if (item.type === "image") return `<x-image src="${item.src}" alt="${item.alt}" size="post"></x-image>`
         return ""
       })
       .join("")
 
     this.postHtml = `
-    <x-row>
-        <x-column>
-            <span class="back-button">
-              <a href="/">BACK ></a>
-            </span>
+      <x-row>
+          <x-column>
+              <span class="back-button">
+                <a href="/">BACK ></a>
+              </span>
+          </x-column>
+          <x-column>
+          <article>
+          <span class="post-body">
+          <h1>${p.title}</h1>
+          <p class="post-date">${p.date}</p>
+              ${bodyHtml}
+          </span>
+          </article>
         </x-column>
         <x-column>
-        <article>
-            <h1>${p.title}</h1>
-            <p>${p.date}</p>
-        <span class="post-body">
-            ${bodyHtml}
-        </span>
-        </article>
-      </x-column>
-      <x-column>
-            <span class="back-button">
-              <a href="/">BACK ></a>
-            </span>
-        </x-column>
-    </x-row>
-    `
+              <span class="back-button">
+                <a href="/">BACK ></a>
+              </span>
+          </x-column>
+      </x-row>
+      `
 
     this.loading = false
     this.render()

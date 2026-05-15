@@ -1,7 +1,10 @@
 import { Button } from "./components/Button.js"
+import { FullWidth } from "./components/FullWidth/FullWidth.js"
 import { Header } from "./components/Header/Header.js"
 import { Hero } from "./components/Hero/Hero.js"
+import { Image } from "./components/Image/Image.js"
 import { Column, Footer, Main, Row } from "./components/Layout.js"
+import { PostBody } from "./components/PostBody/PostBody.js"
 import { PostCardRow } from "./components/PostCardRow/PostCardRow.js"
 import { PostListSkinny } from "./components/PostListSkinny/PostListSkinny.js"
 import { defineWebComponents } from "./lib/utils.js"
@@ -13,7 +16,7 @@ import { NotFound } from "./pages/NotFound.js"
 import { Post } from "./pages/Post/Post.js"
 import { Router } from "./Router.js"
 
-const components = [Header, Footer, Main, Row, Column, Button, Hero, PostCardRow, PostListSkinny]
+const components = [Header, Footer, Main, Row, Column, Button, Hero, PostCardRow, PostListSkinny, Image, FullWidth, PostBody]
 
 const routerConfig = {
   target: "main",

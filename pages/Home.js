@@ -1,3 +1,4 @@
+import { FullWidth } from "../components/FullWidth/FullWidth.js"
 import { Hero } from "../components/Hero/Hero.js"
 import { PostCardRow } from "../components/PostCardRow/PostCardRow.js"
 import { getPostData } from "../lib/getPostData.js"
@@ -17,6 +18,7 @@ export class Home extends HTMLElement {
 
   render() {
     this.innerHTML = `
+    <${tagName(FullWidth)}></${tagName(FullWidth)}>
     <${tagName(Hero)}></${tagName(Hero)}>
     <${tagName(PostCardRow)}></${tagName(PostCardRow)}>
     `
