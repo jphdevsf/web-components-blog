@@ -1,4 +1,5 @@
-import { getPostData } from "../lib/getPostData.js"
+import { getPostData } from "../../lib/getPostData.js"
+import { loadCSS } from "../../lib/loadCSS.js"
 
 export class Archive extends HTMLElement {
   constructor() {
@@ -9,6 +10,7 @@ export class Archive extends HTMLElement {
 
   async connectedCallback() {
     this.innerHTML = `<x-row><x-column><p class="loading">Loading...</p></x-column></x-row>`
+    loadCSS(this, "/pages/")
     await this.loadData()
     this.render()
   }

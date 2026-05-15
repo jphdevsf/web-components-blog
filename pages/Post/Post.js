@@ -1,6 +1,6 @@
-import { getPostData } from "../lib/getPostData.js"
-import { post } from "../lib/images.js"
-import { loadPageCSS } from "../lib/loadCSS.js"
+import { getPostData } from "../../lib/getPostData.js"
+import { post } from "../../lib/images.js"
+import { loadCSS } from "../../lib/loadCSS.js"
 
 export class Post extends HTMLElement {
   constructor() {
@@ -13,7 +13,7 @@ export class Post extends HTMLElement {
   async connectedCallback() {
     this.slug = this.getAttribute("slug")
     this.render()
-    loadPageCSS(this)
+    loadCSS(this, "/pages/")
     await this.loadData()
     this.renderPost()
   }

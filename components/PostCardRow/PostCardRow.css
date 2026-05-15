@@ -1,4 +1,15 @@
 @scope (x-post-card-row) {
+  .row {
+    /* display: grid;
+    grid-template-columns: 1fr 1fr 1fr; */
+    justify-content: space-between;
+  }
+
+  .column {
+    width: 32%;
+    margin: 0;
+  }
+
   .card {
     display: flex;
     flex-direction: column;

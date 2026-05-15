@@ -1,0 +1,12 @@
+@scope (x-archive) {
+  .row {
+    flex-wrap: wrap;
+  }
+  .column {
+    margin-bottom: var(--space-3);
+  }
+
+  .column:last-child {
+    margin-bottom: 0;
+  }
+}

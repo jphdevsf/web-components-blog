@@ -51,16 +51,6 @@ class LayoutComponent extends HTMLElement {
  * ---
  */
 
-export class Header extends LayoutComponent {
-  getConfig() {
-    return {
-      tag: "header",
-      classList: "header",
-      componentName: "x-header"
-    }
-  }
-}
-
 export class Footer extends LayoutComponent {
   getConfig() {
     return {
