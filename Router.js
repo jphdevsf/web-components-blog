@@ -52,6 +52,11 @@ export class Router {
     const type = staticRoute ? "static" : "dynamic"
     const slug = dynamicRoute && path.slice(dynamicRoute.pathPrefix.length)
     this.renderRoute(route, type, slug)
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    })
   }
 
   renderRoute(route, type, slug) {
