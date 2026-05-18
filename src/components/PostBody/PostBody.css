@@ -52,7 +52,6 @@
   p {
     display: block;
     margin: var(--space-4) 0;
-    font-size: 1.15em;
     font-weight: 400;
     line-height: 2em;
   }
@@ -71,7 +70,7 @@
     background-color: var(--color-6);
   }
 
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 768px) {
     :scope {
       grid-column: 2 / 3;
       font-size: 1em;

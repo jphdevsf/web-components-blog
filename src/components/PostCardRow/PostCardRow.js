@@ -1,4 +1,3 @@
-import { card } from "../../lib/imageUrl.js"
 import "./PostCardRow.css"
 
 export class PostCardRow extends HTMLElement {
@@ -15,7 +14,6 @@ export class PostCardRow extends HTMLElement {
   connectedCallback() {}
 
   render() {
-    const { dataVal } = this
     this.innerHTML = `
         <x-row>
         ${this.dataVal

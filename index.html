@@ -58,6 +58,7 @@
     </template>
  <x-header title="Bay Area Hiking Blog">
     <a class="logo" href="/">startwithj</a>
+    <button type="button" aria-expanded="false" aria-label="Toggle navigation" class="hamburger">☰</button>
     <nav>
         <x-button type="navigation" link="/">Home</x-button>
         <x-button type="navigation" link="/archive">Archive</x-button>
@@ -68,10 +69,13 @@
     <!-- router populates templates here -->
 </x-main>
  <x-footer>
+    <span class="footer-button-container">
     <x-button type="footer">Privacy</x-button>
     <x-button type="footer" link="https://github.com/jphdevsf">Github</x-button>
     <x-button type="footer" link="https://www.linkedin.com/in/jacob-hernandez-90201b3a/">LinkedIn</x-button>
-    © <!-- -->2026<!-- --> Jacob Hernandez — Made with ❤️ in the Bay Area.
+    </span>
+    <span class="hide-it md-block">&nbsp;//&nbsp;</span>
+    <span class="footer-copyright-container"> © <!-- -->2026<!-- --> Jacob Hernandez — Made with ❤️ in the Bay Area.</span>
  </x-footer>
 </body>
 </html>

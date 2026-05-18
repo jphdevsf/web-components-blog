@@ -121,21 +121,38 @@ main > .route {
 
 footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-5);
-  margin-top: auto;
+  padding: var(--space-3) 0;
+  margin-top: var(--space-5);
+  font-size: 0.8rem;
+  text-align: center;
   background-color: var(--color-6);
 }
 
+footer x-button {
+  display: inline-block;
+}
+
 footer .button {
-  display: inline;
-  padding: var(--space-2) var(--space-3);
-  margin: 0 var(--space-1);
-  font-weight: var(--font-weight-2);
-  color: var(--color-1);
-  background-color: var(--color-2);
+  display: inline-block;
+  padding: 0;
+  margin: var(--space-1);
+  font-size: 0.8rem;
+  font-weight: var(--font-weight-3);
+  color: var(--color-3);
+  text-decoration: underline;
+  background-color: var(--color-6);
   border: none;
+}
+
+footer .footer-button-container {
+  width: 100%;
+}
+
+.footer-copyright-container {
+  margin: var(--space-2) 0;
 }
 
 .loading {
@@ -144,8 +161,24 @@ footer .button {
   text-align: center;
 }
 
-@media screen and (min-width: 640px) {
+.hide-it {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
   .main > .route {
     display: grid;
+  }
+
+  footer {
+    flex-direction: row;
+  }
+
+  footer .footer-button-container {
+    width: auto;
+  }
+
+  .md-block {
+    display: block;
   }
 }

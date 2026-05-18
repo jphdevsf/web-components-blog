@@ -54,7 +54,7 @@
     background-color: var(--color-3);
   }
 
-  @media screen and (min-width: 640px) {
+  @media screen and (min-width: 768px) {
     :scope {
       grid-column: 2 / 3;
       font-size: 1em;

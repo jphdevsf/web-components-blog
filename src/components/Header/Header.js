@@ -23,6 +23,15 @@ export class Header extends HTMLElement {
 
     // bye bye custom non-semantic element
     this.replaceWith(el)
+
+    const hamburger = el.querySelector(".hamburger")
+    const nav = el.querySelector("nav")
+
+    hamburger.addEventListener("click", () => {
+      const expanded = hamburger.getAttribute("aria-expanded") === "true"
+      hamburger.setAttribute("aria-expanded", !expanded)
+      nav.classList.toggle("active")
+    })
   }
 
   getConfig() {
